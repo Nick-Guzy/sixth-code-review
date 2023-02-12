@@ -27,10 +27,15 @@ function displayAnswer(response, currency) {
   ).innerText = `You have ${output} in ${currency}`;
 }
 
-function displayError(error, currency) {
+function displayError(response, currency) {
+  if (response == "Error: 404 undefined") {
+    document.getElementById("error").innerText = `${currency} is not valid, please select another currency.`
+  }
+  else {
   document.getElementById(
     "error"
-  ).innerText = `There was an error getting the currency from ${currency}: ${error}.`;
+  ).innerText = `There was an error: ${response}.`;
+  }
 }
 
 window.addEventListener("load", function () {
