@@ -6,24 +6,24 @@
 <body>
   <h3>This will exchange currencies</h3>
 
-  <form id="CurrencyForm">
+  <form id="currencyForm">
     <label for="currencySelect">Choose a currency:</label>
   <select name="currency" id="currencySelect">
     <option value="">--Please choose a currency--</option>
-    <option value="Aus">Australian dollar</option>
-    <option value="Swiss">Swiss franc</option>
-    <option value="Won">South korean won</option>
-    <option value="Mxn">Mexican peso</option>
-    <option value="Rus">Russian ruble</option>
+    <option value="AUD">Australian dollar</option>
+    <option value="CHF">Swiss franc</option>
+    <option value="KRW">South korean won</option>
+    <option value="MXN">Mexican peso</option>
+    <option value="RUB">Russian ruble</option>
     </select>
-  <button type="submit">Choose a currency</button>
+    <label for="dollarInput">Enter your dollar amount</label>
+    <input type="number" name="dollar" id="dollarInput"></input>
+  <button type="submit" id="submit">Choose a currency</button>
   </form>
 <br>
 <br>
 <br>
 <p id="error"></p>
-  <div id="currencyDiv">
-    <p id="currency"></p>
-  </div>
+<p id="money"></p>
 </body>
 </html>
